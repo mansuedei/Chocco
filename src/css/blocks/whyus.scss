@@ -1,0 +1,185 @@
+.whyus {
+  position: relative;
+  
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		background-image: url("../../img/bg/whyus--raspberry.png");
+		width: 161px;
+		height: 315px;
+		top: 100%;
+    transform: translateY(rem(-200px));
+    z-index: 1;
+		@include phones() {
+			display: none;
+		}
+	}
+
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		background-image: url("../../img/bg/whyus--grey-leaf.png");
+		width: rem(161px);
+		height: rem(315px);
+		left: 0;
+		top: 0;
+		transform: translateY(rem(319px));
+		z-index: -1;
+		@include phones() {
+			display: none;
+		}
+	}
+}
+
+.whyus-headline {
+	margin-top: rem(49px);
+}
+
+.whyus-headline__desc {
+	margin-top: rem(8px);
+	color: $grey-txt;
+	text-align: center;
+	max-width: 45vw;
+
+	@include phones() {
+		max-width: 80vw;
+	}
+}
+
+.whyus-content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.whyus__content {
+	margin-top: rem(57px);
+}
+
+.whyus-content__whyus-list {
+	display: flex;
+
+	@include tablets() {
+		flex-direction: column;
+		width: 90vw;
+	}
+
+	@include phones() {
+		width: 80vw;
+	}
+}
+
+.whyus-content__whyus-item {
+	display: flex;
+	flex: 1;
+	margin-right: rem(79px);
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+
+	&:nth-of-type(2) {
+		flex: 1.05;
+	}
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+	@include tablets() {
+		margin-bottom: rem(27px);
+		margin-right: 0;
+	}
+
+	&:after {
+		position: absolute;
+		content: "";
+		display: block;
+		background: url("../../img/icons/dots.png") no-repeat center center;
+		width: rem(67px);
+		height: rem(21px);
+		top: 22%;
+		left: 107%;
+
+		@include tablets() {
+			display: none;
+		}
+	}
+
+	&:last-of-type:after {
+		content: "";
+		display: none;
+	}
+}
+
+.whyus-item__container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	@include phones() {
+		flex-direction: row;
+	}
+}
+
+.whyus-item__image-container {
+	position: relative;
+	&:before {
+		content: "";
+		display: block;
+		width: rem(125px);
+		height: rem(125px);
+		background-color: $grey-bg;
+		border-radius: 50%;
+		z-index: 2;
+	}
+
+	@include phones() {
+		margin-right: rem(13px);
+	}
+}
+
+.whyus-item__icon {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	fill: none;
+	stroke: #2a2a29;
+	stroke-width: 0.75;
+	stroke-miterlimit: 10;
+}
+
+.whyus-item__desc-container {
+	margin-top: rem(20px);
+	text-align: center;
+	align-items: center;
+
+	@include phones() {
+		text-align: left;
+	}
+}
+
+.whyus-item__title {
+	font-size: rem(27px);
+	font-weight: 700;
+}
+
+.whyus-item__desc {
+	margin-top: rem(19px);
+	font-weight: 300;
+	color: $grey-txt;
+
+	@include tablets() {
+		padding: 0 rem(60px);
+	}
+
+	@include phones() {
+		padding: 0;
+	}
+}
